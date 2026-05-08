@@ -13,29 +13,96 @@ tags:
 - OCR
 - Verification
 - Plans
-description: Placeholder plans/pricing artifact for Klippa. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled.
+- Pricing
+description: >-
+  Klippa's pricing is sales-led; the public site does not list per-document
+  prices. Customers receive a quote based on monthly document/page volume,
+  document types and product mix (DocHorizon / Financial / Identity). Free
+  trials and proof-of-concept programmes are available. EU-hosted; GDPR and
+  ISO 27001 compliant.
+notes: >-
+  Numeric prices remain unreconciled pending sales engagement; customer-
+  specific contracts are negotiated annually with prepaid document buckets
+  and overage rates.
 sources:
+- https://www.klippa.com/en/pricing/
 - https://www.klippa.com/
 plans:
-- id: klippa-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+- id: klippa-trial
+  name: Free Trial / Proof of Concept
+  type: free
+  description: Time-limited evaluation access to Klippa APIs for prospective customers.
   entries:
-  - label: API Access
-    name: api_access
+  - label: Trial
+    name: trial
     type: flat
-    metric: varies
+    metric: trial-days
+    limit: -1
+    timeFrame: trial
+    geo: global
+    unit: 1
+    price: 0
+    userMultiplied: false
+- id: klippa-dochorizon
+  name: DocHorizon (Doxis AI.dp)
+  type: subscription
+  description: Document AI platform; pricing by monthly document volume, document types and modules. Custom quote.
+  entries:
+  - label: Custom contract
+    name: contract
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: annual
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+- id: klippa-financial
+  name: Receipt / Invoice / Bank-statement OCR
+  type: subscription
+  description: Per-document parsing for receipts, invoices, and bank statements; quoted per volume.
+  entries:
+  - label: Per-document
+    name: per_document
+    type: usage
+    metric: document
     limit: -1
     timeFrame: usage
     geo: global
     unit: 1
-    price: see https://www.klippa.com/
+    price: contact sales
     userMultiplied: false
-  elements:
-  - name: Pending Reconciliation
+- id: klippa-identity
+  name: Klippa Identity Verification
+  type: subscription
+  description: KIV — ID/passport verification, face match, liveness; per-verification pricing.
+  entries:
+  - label: Per-verification
+    name: per_verification
+    type: usage
+    metric: verification
+    limit: -1
+    timeFrame: usage
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+- id: klippa-enterprise
+  name: Enterprise / On-Prem
+  type: enterprise
+  description: Volume / on-prem / dedicated cluster contracts.
+  entries:
+  - label: Custom contract
+    name: enterprise_contract
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: annual
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

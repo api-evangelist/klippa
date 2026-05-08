@@ -5,7 +5,7 @@ provider: Klippa
 providerId: klippa
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - Document AI
@@ -15,10 +15,18 @@ tags:
 - FinOps
 - Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Klippa. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: >-
+  FOCUS-aligned FinOps profile for Klippa. Billing is annual sales-led
+  contracts denominated in monthly document/page buckets per API surface
+  (DocHorizon, Financial OCR, Identity Verification). Charges typically
+  bill in EUR for EU customers / USD for US customers; can include EU
+  data-residency and on-prem clauses.
+notes: >-
+  Klippa's strength as a FinOps subject is per-API-surface allocation —
+  invoices, receipts and identity verifications can be tracked separately
+  through different API keys.
 sources:
-- https://www.klippa.com/
+- https://www.klippa.com/en/pricing/
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -27,40 +35,60 @@ alignedWith:
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 publisherName: Klippa
-serviceCategory: AI
+serviceCategory: Document AI
 billingModel:
-  pricingCategory: To Be Reconciled
-  billingFrequency: Monthly
-  billingCurrency: USD
+  pricingCategory: Subscription + Usage (per document)
+  billingFrequency: Annual
+  billingCurrency: EUR / USD
   chargeCategories:
   - Usage
   - Purchase
   - Adjustment
 focusColumns:
-  ServiceName: Klippa
-  ServiceCategory: AI
+  ServiceName: Klippa DocHorizon
+  ServiceCategory: AI / IDP
   ProviderName: Klippa
   PublisherName: Klippa
   InvoiceIssuerName: Klippa
-  BillingCurrency: USD
+  BillingCurrency: EUR
   ChargeCategory: Usage
+  PricingUnit: document / verification
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: documents_processed_dochorizon
+  description: Documents processed via DocHorizon platform.
+  unit: document
   aggregation: sum
   dimensions:
   - account
-  - resource
+  - api_key
+  - document_type
+- name: financial_documents
+  description: Receipts / invoices / bank statements parsed.
+  unit: document
+  aggregation: sum
+  dimensions:
+  - account
+- name: identity_verifications
+  description: Identity verifications (KIV) performed.
+  unit: verification
+  aggregation: sum
+  dimensions:
+  - account
+- name: subscription_contract
+  description: Annual contract subscription.
+  unit: contract-year
+  aggregation: sum
+  dimensions:
+  - account
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Use Klippa portal usage page; group by API key for per-product breakdown.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: One API key per business unit / product line; map to FOCUS ResourceTag.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Right-size annual document buckets; renegotiate at renewal; combine receipts/invoices into DocHorizon if volume warrants consolidated platform pricing.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Assign API-key owners; review monthly burn-down.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

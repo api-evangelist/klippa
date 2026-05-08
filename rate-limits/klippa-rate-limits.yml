@@ -15,21 +15,36 @@ tags:
 - Rate Limiting
 - Quotas
 - Throttling
-description: Placeholder rate-limit artifact for Klippa. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: >-
+  Klippa REST endpoints accept a per-API-key throttle and 429 responses on
+  excess. Per-customer numeric ceilings are configured at contract sign and
+  not enumerated in public docs. Document size limits and supported formats
+  vary per API — DocHorizon accepts batch uploads.
+notes: >-
+  Customers requiring higher throughput can request a contract update or
+  dedicated cluster (enterprise). Reconciled flagged false until per-product
+  numeric values are visible.
 sources:
+- https://custom-ocr.klippa.com/
 - https://www.klippa.com/
 responseCodes:
   throttled: 429
 limits:
-- name: Default
+- name: REST API per key
+  scope: api_key
+  metric: requests
+  limit: see Klippa contract
+  notes: Per-key throttle; 429 on excess.
+- name: Per-product document caps
   scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  metric: documents/month
+  limit: contract-defined
+  notes: Negotiated bundle per API surface.
 policies:
 - name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  description: Honor 429 with Retry-After; use exponential backoff.
+- name: Capacity Planning
+  description: Coordinate burst windows with Klippa support; enterprise contracts can provision dedicated clusters.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

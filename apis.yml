@@ -3,7 +3,12 @@ url: https://raw.githubusercontent.com/api-evangelist/klippa/refs/heads/main/api
 name: Klippa
 x-type: company
 description: >-
-  Klippa is a document AI platform with OCR, document classification, identity verification, and expense/receipt management APIs.
+  Klippa is a document AI platform whose flagship product, DocHorizon (rebranded
+  as Doxis AI.dp following the SER acquisition), provides OCR, document
+  classification, conversion, verification, fraud detection and anonymization
+  for 50+ document types. Klippa also publishes dedicated APIs for receipts,
+  invoices, IDs/passports and expense management. EU-hosted, GDPR / ISO 27001
+  certified.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - AI
@@ -11,13 +16,63 @@ tags:
   - IDP
   - OCR
   - Verification
+  - GDPR
+  - EU
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: klippa:dochorizon
+    name: Klippa DocHorizon (Doxis AI.dp) API
+    description: >-
+      Flagship REST API for end-to-end document AI — OCR, classification,
+      extraction, conversion (JSON/XML/PDF/CSV/XLSX/UBL), verification, fraud
+      detection, anonymization. API-key auth.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://custom-ocr.klippa.com/
+    baseURL: https://custom-ocr.klippa.com/api/v1
+    tags:
+      - REST
+      - OCR
+      - Classification
+      - Conversion
+      - Verification
+    properties:
+      - type: Documentation
+        url: https://custom-ocr.klippa.com/
+  - aid: klippa:financial
+    name: Klippa Financial Document API (Receipts / Invoices)
+    description: >-
+      REST API specifically for parsing receipts, invoices and bank statements.
+      Returns structured JSON with line items, taxes, totals.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.klippa.com/en/ocr/financial-full/
+    baseURL: https://api.klippa.com
+    tags:
+      - REST
+      - Receipts
+      - Invoices
+      - Finance
+  - aid: klippa:identity
+    name: Klippa Identity Verification (KIV) API
+    description: >-
+      REST API and SDKs for ID document verification, passport verification,
+      face match and liveness detection.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.klippa.com/en/identity-verification/
+    baseURL: https://api.klippa.com
+    tags:
+      - REST
+      - KYC
+      - Identity
+      - Liveness
 common:
   - type: Website
     url: https://www.klippa.com/
+  - type: Pricing
+    url: https://www.klippa.com/en/pricing/
+  - type: GitHub
+    url: https://github.com/klippa-app
   - type: Plans
     url: plans/klippa-plans-pricing.yml
   - type: RateLimits
