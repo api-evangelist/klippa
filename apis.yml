@@ -1,0 +1,29 @@
+aid: klippa
+url: https://raw.githubusercontent.com/api-evangelist/klippa/refs/heads/main/apis.yml
+name: Klippa
+x-type: company
+description: >-
+  Klippa is a document AI platform with OCR, document classification, identity verification, and expense/receipt management APIs.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI
+  - Document AI
+  - IDP
+  - OCR
+  - Verification
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.klippa.com/
+  - type: Plans
+    url: plans/klippa-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/klippa-rate-limits.yml
+  - type: FinOps
+    url: finops/klippa-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
