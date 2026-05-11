@@ -79,6 +79,16 @@ common:
     url: rate-limits/klippa-rate-limits.yml
   - type: FinOps
     url: finops/klippa-finops.yml
+  - type: Integrations
+    url: https://www.klippa.com/en/integrations/
+integrations:
+  - name: NL
+  - name: SpendControl-Integrations
+  - name: Integration for accounting and ERP software
+  - name: Identity management and SSO integrations
+  - name: Integrations with accounting and ERP system
+  - name: SpendControl API
+  - name: Export bookings for software without API
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
