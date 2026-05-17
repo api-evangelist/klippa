@@ -1,7 +1,7 @@
 aid: klippa
 url: https://raw.githubusercontent.com/api-evangelist/klippa/refs/heads/main/apis.yml
 name: Klippa
-x-type: company
+kind: company
 description: >-
   Klippa is a document AI platform whose flagship product, DocHorizon (rebranded
   as Doxis AI.dp following the SER acquisition), provides OCR, document
