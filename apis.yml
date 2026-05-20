@@ -67,6 +67,8 @@ apis:
       - Identity
       - Liveness
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/klippa-ai
   - type: Website
     url: https://www.klippa.com/
   - type: Pricing
