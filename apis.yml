@@ -9,7 +9,7 @@ description: >-
   for 50+ document types. Klippa also publishes dedicated APIs for receipts,
   invoices, IDs/passports and expense management. EU-hosted, GDPR / ISO 27001
   certified.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Document AI
@@ -28,7 +28,7 @@ apis:
       Flagship REST API for end-to-end document AI — OCR, classification,
       extraction, conversion (JSON/XML/PDF/CSV/XLSX/UBL), verification, fraud
       detection, anonymization. API-key auth.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://custom-ocr.klippa.com/
     baseURL: https://custom-ocr.klippa.com/api/v1
     tags:
@@ -45,7 +45,7 @@ apis:
     description: >-
       REST API specifically for parsing receipts, invoices and bank statements.
       Returns structured JSON with line items, taxes, totals.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.klippa.com/en/ocr/financial-full/
     baseURL: https://api.klippa.com
     tags:
@@ -58,7 +58,7 @@ apis:
     description: >-
       REST API and SDKs for ID document verification, passport verification,
       face match and liveness detection.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://www.klippa.com/en/identity-verification/
     baseURL: https://api.klippa.com
     tags:
