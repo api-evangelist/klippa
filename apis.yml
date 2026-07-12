@@ -67,6 +67,10 @@ apis:
       - Identity
       - Liveness
 common:
+  - type: VulnerabilityDisclosure
+    url: security/klippa-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/klippa-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/klippa-ai
   - type: Website
@@ -83,6 +87,8 @@ common:
     url: finops/klippa-finops.yml
   - type: Integrations
     url: https://www.klippa.com/en/integrations/
+  - url: https://www.klippa.com/en/blog/
+    type: Blog
 integrations:
   - name: NL
   - name: SpendControl-Integrations
