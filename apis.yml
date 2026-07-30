@@ -9,7 +9,19 @@ description: >-
   for 50+ document types. Klippa also publishes dedicated APIs for receipts,
   invoices, IDs/passports and expense management. EU-hosted, GDPR / ISO 27001
   certified.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: true
+  try_now: false
+  public: false
+  label: Freemium (free trial)
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/klippa.png
 tags:
   - AI
   - Document AI
