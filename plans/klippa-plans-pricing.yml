@@ -109,3 +109,53 @@ plans:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - negotiated
+  - object
+  - transaction
+  plans:
+  - name: Free Trial / Proof of Concept
+    access: free
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - term
+  - name: DocHorizon (Doxis AI.dp)
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - negotiated
+    periods:
+    - year
+  - name: Receipt / Invoice / Bank-statement OCR
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - object
+    periods:
+    - per-use
+  - name: Klippa Identity Verification
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - transaction
+    periods:
+    - per-use
+  - name: Enterprise / On-Prem
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    periods:
+    - year
