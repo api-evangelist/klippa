@@ -57,6 +57,25 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-einvoicing-tax.py
   first_seen: '2026-10-15'
+- partner_name: Automation Anywhere (automation-anywhere-bot-store)
+  partner: automation-anywhere
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: automation-anywhere-bot-store
+  evidence: https://botstore.automationanywhere.com/vendor/klippaappbv/
+  mirror_of: automation-anywhere/integrations/automation-anywhere-integration-edges.yml
+  apps:
+  - Data Extraction with the Klippa OCR API Package
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: RPA marketplace listing
+  badges:
+  - Bot Security Program Level 2
 generated: '2026-10-15'
 method: searched
 source:
@@ -65,3 +84,4 @@ checked:
 - https://peppol.org/members/peppol-certified-service-providers/
 - https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees
 - https://www.streamlinedsalestax.org/certified-service-providers/certified-service-providers-list
+- automation-anywhere/integrations/automation-anywhere-integration-edges.yml
