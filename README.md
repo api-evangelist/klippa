@@ -1,4 +1,4 @@
-# Klippa (klippa)
+# Klippa
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,36 +64,106 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Klippa is a document AI platform whose flagship product, DocHorizon (rebranded as Doxis AI.dp following the SER acquisition), provides OCR, classification, conversion, verification, fraud detection and anonymization for 50+ document types. Klippa also publishes dedicated APIs for receipts, invoices, IDs/passports and expense management. EU-hosted; GDPR / ISO 27001 certified.
+Klippa is a document AI platform whose flagship product, DocHorizon (rebranded as Doxis AI.dp following the SER acquisition), provides OCR, document classification, conversion, verification, fraud detection and anonymization for 50+ document types. Klippa also publishes dedicated APIs for receipts, invoices, IDs/passports and expense management. EU-hosted, GDPR / ISO 27001 certified.
 
-**APIs.json:** [apis.yml](apis.yml)
+**Areas:** Artificial Intelligence · Document AI · Intelligent Document Processing · OCR · Verification · GDPR · EU
 
-## APIs
-- **DocHorizon (Doxis AI.dp)** — `https://custom-ocr.klippa.com/api/v1` — flagship document AI: OCR, classification, extraction, conversion (JSON/XML/PDF/CSV/XLSX/UBL), verification, fraud detection, anonymization.
-- **Financial Documents OCR** — `https://api.klippa.com` — receipts, invoices, bank statements.
-- **Klippa Identity Verification (KIV)** — `https://api.klippa.com` — ID/passport verification, face match, liveness.
+## Klippa on APIs.io
 
-## OpenAPI
-Klippa does not publish a downloadable OpenAPI/Swagger document at a stable public anonymous URL as of 2026-05-08; pipeline did not retrieve a spec into `openapi/`.
+Everything profiled for Klippa is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/klippa/](https://apis.io/providers/klippa/)** — or go straight to one of the APIs or properties below.
 
-## Tags
-AI, Document AI, IDP, OCR, Verification, GDPR, EU
+### APIs (3)
 
-## Common Properties
-- [Website](https://www.klippa.com/) · [Pricing](https://www.klippa.com/en/pricing/) · [GitHub](https://github.com/klippa-app)
-- [Plans](plans/klippa-plans-pricing.yml) — directional only (sales-led, no public list pricing)
-- [Rate Limits](rate-limits/klippa-rate-limits.yml) — directional (contract-defined)
-- [FinOps](finops/klippa-finops.yml) — reconciled, FOCUS-aligned
+- [Klippa DocHorizon (Doxis AI.dp) API](https://apis.io/apis/klippa/dochorizon/) — Flagship REST API for end-to-end document AI — OCR, classification, extraction, conversion (JSON/XML/PDF/CSV/XLSX/UBL), verification, fraud detection,…
+- [Klippa Financial Document API (Receipts / Invoices)](https://apis.io/apis/klippa/financial/) — REST API specifically for parsing receipts, invoices and bank statements. Returns structured JSON with line items, taxes, totals.
+- [Klippa Identity Verification (KIV) API](https://apis.io/apis/klippa/identity/) — REST API and SDKs for ID document verification, passport verification, face match and liveness detection.
 
-## Plans (directional)
-- **Free Trial / POC** — time-limited evaluation.
-- **DocHorizon** — annual contract sized by volume / modules.
-- **Financial OCR** / **KIV** — per-document or per-verification, sales-quoted.
-- **Enterprise / On-Prem** — dedicated cluster.
+### Published properties
 
-## Timestamps
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Maintainers
-- **Kin Lane** — kin@apievangelist.com
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Klippa Domain Security](https://apis.io/security/klippa/klippa-domain-security/)
+- [Klippa Vulnerability Disclosure](https://apis.io/security/klippa/klippa-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Klippa Plans Pricing](https://apis.io/plans/klippa/klippa-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Klippa Rate Limits](https://apis.io/rate-limits/klippa/klippa-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Klippa Finops](https://apis.io/finops/klippa/klippa-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.klippa.com/)
+- [Pricing](https://www.klippa.com/en/pricing/)
+- [Blog](https://www.klippa.com/en/blog/)
+
+## API Evangelist rating
+
+**Kin Score 10.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 7.9 |
+
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/klippa/](https://apis.io/providers/klippa/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Klippa: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/klippa/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
